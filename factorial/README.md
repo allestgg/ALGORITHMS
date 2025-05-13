@@ -1,21 +1,66 @@
-# 🧮 Factorial Algorithm
+# Factorial Algorithm ➗
 
-The **Factorial Algorithm** calculates the factorial of a non-negative integer **n**, which is the product of all positive integers less than or equal to **n**. The factorial of **n** is denoted as **n!**.
+The **Factorial** of a non-negative integer `n` is the product of all positive integers less than or equal to `n`. It is denoted by `n!`.
 
-## 🔢 How it works:
-The algorithm multiplies all integers from **n** down to **1**. For example, the factorial of **5** is calculated as:
-**5! = 5 × 4 × 3 × 2 × 1 = 120**.
-
-### Example:
-For **n = 4**, the factorial calculation would be:
-**4! = 4 × 3 × 2 × 1 = 24**.
-
-## 📉 Time Complexity:
-The time complexity of the **Factorial Algorithm** is **O(n)**, as it requires **n** multiplicative operations to compute the factorial.
+> Example: `5! = 5 × 4 × 3 × 2 × 1 = 120`
 
 ---
 
-### 📊 Summary:
-- **Factorial Algorithm 🧮**: A basic but essential algorithm for computing factorials, with a time complexity of **O(n)**.
-- **Best for**: Simple mathematical computations, especially when dealing with combinations, permutations, or recursive functions.
+## 📌 Definition
 
+`n! = n × (n - 1) × (n - 2) × ... × 1`  
+`0! = 1` (by definition)
+
+---
+
+## 🚀 Use Cases
+
+- Combinatorics (e.g., permutations and combinations)
+- Probability theory
+- Mathematical series (like Taylor series)
+- Algorithm analysis
+
+---
+
+## 💻 Recursive Implementation (Python)
+
+```python
+def factorial_recursive(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial_recursive(n - 1)
+```
+
+---
+
+## 💻 Iterative Implementation (Python)
+
+```python
+def factorial_iterative(n):
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
+```
+
+---
+
+## ⚠️ Constraints
+
+- Input should be a non-negative integer.
+- Recursive approach may hit the recursion limit for large `n`.
+
+---
+
+## ✅ Pros
+
+- Simple to implement.
+- Useful in many mathematical and computational problems.
+
+---
+
+## ❌ Cons
+
+- Recursive version is not suitable for large inputs due to stack overflow.
+
+---

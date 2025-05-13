@@ -1,19 +1,65 @@
-# 🔍 Sequential Search Algorithm
+# Sequential Search Algorithm 🔍
 
-The **Sequential Search** algorithm is one of the simplest ways to search for a target element within a list. It involves checking each element one by one from the beginning until a match is found or the entire list is exhausted.
-
-## 🚶‍♂️ How it works:
-The algorithm sequentially iterates through the list, comparing each element with the target value. If a match is found, the position of the element is returned. If no match is found after checking all elements, it returns an indication that the element isn't present.
-
-### Example:
-Imagine you are looking for a specific book title in a list of books. The algorithm starts at the first title, checks if it matches, then moves to the next, and continues until it finds the title or reaches the end of the list.
-
-## 🕒 Time Complexity:
-The time complexity of the **Sequential Search** algorithm is **O(n)**, where **n** is the number of elements in the list. In the worst case, it may need to check every element.
+**Sequential Search** (or **Linear Search**) is the simplest search algorithm that checks each element in a list one by one until it finds the target value or reaches the end.
 
 ---
 
-### 📊 Summary:
-- **Sequential Search 🚶‍♂️**: Simple to implement, but may be slow for large lists with a time complexity of **O(n)**.
-- **Best for**: Small lists or when the data is unsorted.
+## 📌 How It Works
+
+1. Start at the beginning of the array.
+2. Compare each element with the target.
+3. If the element matches, return its index.
+4. If the end is reached and no match is found, return `-1`.
+
+> Example:  
+Searching for `3` in `[7, 2, 5, 3, 9]`  
+Result: Found at index `3`
+
+---
+
+## 🔍 Time Complexity
+
+- **Best Case:** `O(1)` (first element is the match)
+- **Average Case:** `O(n)`
+- **Worst Case:** `O(n)` (target not found or last element)
+- **Space Complexity:** `O(1)`
+
+---
+
+## ✅ Pros
+
+- Very simple and easy to implement
+- Works on **unsorted** data
+- No extra memory needed
+
+---
+
+## ❌ Cons
+
+- Inefficient for large datasets
+- Slow compared to binary search on sorted data
+
+---
+
+## 🧪 Test Case
+
+```python
+arr = [10, 20, 30, 40, 50]
+print(sequential_search(arr, 30))  # Output: 2
+print(sequential_search(arr, 60))  # Output: -1
+```
+
+---
+
+## 📈 Visualization
+
+![gif](https://www.crio.do/blog/content/images/2022/08/Sequential-Search.gif)
+
+---
+
+## 📚 Real-World Use
+
+- Simple searches in small datasets
+- Useful when data is unsorted
+- Quick prototyping or teaching purposes
 
